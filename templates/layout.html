@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" type = "text/css" href="{{url_for('static', filename='css/style.css')}}">
+</head>
+
+<body>
+    
+    <div class="topbar">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 text-sm">
+              <div class="site-info">
+                <a href="#"><span class="mai-call text-primary"></span> +56945781532</a>
+                <span class="divider">|</span>
+                <a href="#"><span class="mai-mail text-primary"></span> contacto@dosalamos.com</a>
+              </div>
+            </div>
+            <div class="col-sm-4 text-right text-sm">
+              <div class="social-mini-button">
+                <a href="#"><span class="mai-logo-facebook-f"></span></a>
+                <a href="#"><span class="mai-logo-twitter"></span></a>
+                <a href="#"><span class="mai-logo-dribbble"></span></a>
+                <a href="#"><span class="mai-logo-instagram"></span></a>
+              </div>
+            </div>
+          </div> 
+        </div> 
+      </div> 
+
+    <nav class="menu">
+        <a href="/"><label for="" class="logo">🌲 DOS ALAMOS 🌲</label></a>
+        <ul class="menu-opc">
+            <li>
+                <a href="/">Inicio </a>
+            </li>
+
+            <li>
+                <a href="/login">Iniciar sesion </a>
+            </li>
+            <li>
+                <a href="/registro">Crea tu cuenta! </a>
+            </li>
+        </ul>
+    </nav>
+    
+    
+    {% block content %}
+    
+    {% endblock %}
+</body>
+</html>
