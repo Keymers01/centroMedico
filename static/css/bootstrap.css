@@ -2573,8 +2573,8 @@
   
   .btn-primary {
     color: #fff;
-    background-color: #007bff;
-    border-color: #007bff;
+    background-color: #00D9A5;
+    border-color: #000000;
   }
   
   .btn-primary:hover {
@@ -4309,7 +4309,7 @@
   .nav-pills .nav-link.active,
   .nav-pills .show > .nav-link {
     color: #fff;
-    background-color: #007bff;
+    background-color: #ffffff;
   }
   
   .nav-fill .nav-item {
@@ -10090,7 +10090,7 @@
   }
   
   .text-primary {
-    color: #007bff !important;
+    color: #00D9A5 !important;
   }
   
   a.text-primary:hover, a.text-primary:focus {
