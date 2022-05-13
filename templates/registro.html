@@ -8,7 +8,7 @@
     <div class="container">
       <h1 class="text-center wow fadeInUp">Ingrese sus datos</h1>
 
-      <form action="login.html" onsubmit="myFunction()" class="contact-form">
+      <form action="/login" onsubmit="myFunction()" class="contact-form">
         <div class="row mt-5 ">
           <div class="col-12 col-sm-6 py-2 wow fadeInRight">
             <input type="text" name="name" id="name" required class="form-control required"" placeholder="Nombre:">
@@ -23,7 +23,7 @@
             <input type="password" name="password2" id="password2" required class="form-control" minlength="8" placeholder="Repetir Contraseña:">
           </div>
           <div class="col-12 col-sm-6 py-2 wow fadeInLeft">
-            <input oninput="checkRut(this)" type="text" name="rut" id="rut" class="form-control" required placeholder="Rut: (Ej: 10123432-2)">
+            <input oninput="checkRut(this)" type="text" name="rut" id="rut" maxlength="10" class="form-control" required placeholder="Rut: (Ej: 10123432-2)">
           </div>
           <div class="col-12 col-sm-6 py-2 wow fadeInRight">
             <input type="email" name="email" id="email" class="form-control" required placeholder="Correo electronico:">
@@ -61,7 +61,7 @@
       alert("Su cuenta ha sido creada!");
     }
     </script>
-
+  
     </div> <!-- .container -->
     <!--  -->
   </div> <!-- .page-section -->
