@@ -506,13 +506,13 @@ body:before{
   .btn-primary {
     color: #fff;
     background-color: #00D9A5;
-    border-color: transparent;
+    border-color: #6c757d;
   }
   
   .btn-primary.disabled, .btn-primary:disabled {
     color: #fff;
     background-color: #07be94;
-    border-color: transparent;
+    border-color: #6c757d;
   }
   
   .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,

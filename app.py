@@ -1,3 +1,4 @@
+
 from flask import Flask,  render_template, request, redirect, url_for, session # pip install Flask
 from flask_mysqldb import MySQL,MySQLdb # pip install Flask-MySQLdb
 from os import path #pip install notify-py
@@ -16,6 +17,10 @@ mysql = MySQL(app)
 @app.route('/')
 def home():
     return render_template("contenido.html")    
+
+@app.route('/forgot_pass', methods = ["GET", "POST"])
+def forgot_pass():
+    return render_template("forgot_pass.html")
 
 @app.route('/layout', methods = ["GET", "POST"])
 def layout():
