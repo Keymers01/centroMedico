@@ -8,36 +8,33 @@
                 <img src="{{url_for('static', filename='img/login.jpg')}}"  width=400px height=525px class="logo3">
             </div> -->
 
-   
-      <form class="contact-form mt-5" action="/login" method="POST"></form>
-      <div id="columna1" class="row mb-3">
-        <div class="col-sm-6 py-2 wow fadeInLeft">
+    <div class="page-section">
+      <form class="contact-form mt-5" action="/login" method="POST">
+        <div id="columna1" class="row mb-3">
+          <div class="col-sm-6 py-2 wow fadeInLeft">
+            <label for="fullName"> Ingrese su RUT</label>
+            <input type="text" oninput="checkRut(this)" class="form-input" name="rut" maxlength="10"
+              placeholder="  Ej: 12345678-9" required>
+            <br>
+            <br>
+            <label for="fullName">Ingrese su Contraseña</label>
+            <input type="password" class="form-input" name="password" minlength="8"
+              placeholder=" Ingrese su contraseña:" required>
+          </div>
 
-          <label> Ingrese su RUT</label>
-          <input type="text" oninput="checkRut(this)" class="form-input" name="rut" maxlength="10"
-            placeholder="  Ej: 12345678-9" required>
-          <br>
-          <br>
-          <label>Ingrese su Contraseña</label>
-          <input type="password" class="form-input" name="password" minlength="8" placeholder=" Ingrese su contraseña:"
-            required>
+          <br />
+
+
+          <div id="columnaregistro" class="col-sm-6 py-2 wow fadeInLeft">
+            <h1>¿Eres Nuevo?</h1>
+            <a type="submit" class="btn btn-primary wow zoomIn" href="/registro">Crea tu cuenta!</a>
+          </div>
+          </br>
         </div>
-
-        <br />
-
-
-        <div id="columnaregistro" class="col-sm-6 py-2 wow fadeInLeft">
-          <h1>¿Eres Nuevo?</h1>
-          <a type="submit" class="btn btn-primary wow zoomIn" href="/registro">Crea tu cuenta!</a>
-        </div>
+        <button class="btn btn-primary wow zoomIn" class="boton">Ingresar</button>
         </br>
-      </div>
-      <div class="form-group">
-        <button class="boton">Ingresar</button>
-      </div>
-      </br>
-      </br>
-      <a href="password.html"> He olvidado mi contraseña</a>
+        </br>
+        <a href="password.html"> He olvidado mi contraseña</a>
       </form>
     </div>
 
