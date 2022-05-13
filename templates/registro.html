@@ -8,19 +8,19 @@
     <div class="container">
       <h1 class="text-center wow fadeInUp">Ingrese sus datos</h1>
 
-      <form action="/login" onsubmit="myFunction()" class="contact-form">
+      <form class=form action="/registro" onsubmit="myFunction()" method="POST" class="contact-form">
         <div class="row mt-5 ">
           <div class="col-12 col-sm-6 py-2 wow fadeInRight">
             <input type="text" name="name" id="name" required class="form-control required"" placeholder="Nombre:">
           </div>
           <div class="col-12 col-sm-6 py-2 wow fadeInRight">
-            <input type="text" name="lastname" id="lastname" required class="form-control" placeholder="Apellidos:">
+            <input type="text" name="last_name" id="last_name" required class="form-control" placeholder="Apellidos:">
           </div>
           <div class="col-12 col-sm-6 py-2 wow fadeInLeft">
-            <input type="password" name="password1" id="password1" required class="form-control" minlength="8" placeholder="Contraseña:">
+            <input type="password" name="password" id="password" required class="form-control" minlength="8" placeholder="Contraseña:">
           </div>
           <div class="col-12 col-sm-6 py-2 wow fadeInRight">
-            <input type="password" name="password2" id="password2" required class="form-control" minlength="8" placeholder="Repetir Contraseña:">
+            <input type="password" name="pass_confirmation" id="pass_confirmation" required class="form-control" minlength="8" placeholder="Repetir Contraseña:">
           </div>
           <div class="col-12 col-sm-6 py-2 wow fadeInLeft">
             <input oninput="checkRut(this)" type="text" name="rut" id="rut" maxlength="10" class="form-control" required placeholder="Rut: (Ej: 10123432-2)">
@@ -29,23 +29,14 @@
             <input type="email" name="email" id="email" class="form-control" required placeholder="Correo electronico:">
           </div>
           <div class="col-12 col-sm-6 py-2 wow fadeInLeft">
-            <input type="text" name="celular" id="celular" class="form-control" required placeholder="Numero de celular:">
+            <input type="text" name="cellphone_num" id="cellphone_num" class="form-control" required placeholder="Numero de celular:">
           </div>
-          <!-- <div class="col-12 col-sm-6 py-2 wow fadeInRight" data-wow-delay="300ms">
-            <select name="departement" id="departement" class="custom-select">
-              <option value="general">General Health</option>
-              <option value="cardiology">Cardiology</option>
-              <option value="dental">Dental</option>
-              <option value="neurology">Neurology</option>
-              <option value="orthopaedics">Orthopaedics</option>
-            </select>
-          </div> -->
 
           <div class="col-12 col-sm-6 py-2 wow fadeInRight">
-            <input type="text" name="telefono" id="telefono" class="form-control"  placeholder="Telefono fijo: (Opcional)">
+            <input type="text" name="phone_num" id="phone_num" class="form-control"  placeholder="Telefono fijo: (Opcional)">
           </div>
           <div class="col-12 py-2 wow fadeInUp" data-wow-delay="300ms">
-            <input type="text" name="adress" id="adress" class="form-control"  placeholder="Direccion: (Ej: Padre Alonso de Ovalle 1586) (Opcional)">
+            <input type="text" name="address" id="address" class="form-control"  placeholder="Direccion: (Ej: Padre Alonso de Ovalle 1586) (Opcional)">
           </div>
         </div>
         <br>
@@ -53,7 +44,6 @@
         <div class="form-group">
             <button class="boton btn btn-primary wow fadeInUp">Registrar</button>
         </div>
-       <!-- <div><button type="submit" class="btn btn-primary wow fadeInUp" >Crea tu cuenta!</button></div>  -->
 
     </form>
     <script>
@@ -62,9 +52,8 @@
     }
     </script>
   
-    </div> <!-- .container -->
-    <!--  -->
-  </div> <!-- .page-section -->
+    </div> <!-- .container --> 
+  </div> .page-section
 
 <!-- 
     <div class="registro">
@@ -115,7 +104,6 @@
                 <label>Telefono: (Opcional)</label>
                 <input type="text" class="form-input" name="phone_num" maxlength="12" placeholder="Direccion: (Opcional)" >
             </div>
-
 
             <div class="form-group">
                 <button class="boton">Registrar</button>
