@@ -22,9 +22,42 @@ def home():
 def horadoc():
     return render_template("horadoc.html")  
 
+
+
 @app.route('/forgot_pass', methods = ["GET", "POST"])
 def forgot_pass():
-    return render_template("forgot_pass.html")
+
+    notificacion = Notify()
+
+    if request.method == 'POST':
+        email = request.form['email']
+
+        cur = mysql.connection.cursor()
+        cur.execute("SELECT * FROM users WHERE email=%s",(email,))
+        user = cur.fetchone()
+        cur.close()
+
+        if len(user)>0:
+            if email == user["email"]:
+                session['password'] = user['password']
+                
+                return render_template("paciente/pass.html")
+
+            else:
+                notificacion.title = "Error de Acceso"
+                notificacion.message="Correo no valido"
+                notificacion.send()
+                return render_template("forgot_pass.html")
+        else:
+            notificacion.title = "Error de Acceso"
+            notificacion.message="No existe el usuario"
+            notificacion.send()
+            return render_template("forgot_pass.html")
+    else:
+        
+        return render_template("forgot_pass.html")
+
+
 
 @app.route('/layout', methods = ["GET", "POST"])
 def layout():

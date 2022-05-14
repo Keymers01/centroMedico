@@ -6,49 +6,24 @@
 
 <div class="page-section">
     <div class="container">
-      <h1 class="text-center wow fadeInUp">PASSWORD</h1>
+      <h1 class="text-center wow fadeInUp">RECUPERAR CONTRASEÑA</h1>
 
-      <form class=form action="/registro" onsubmit="myFunction()" method="POST" class="contact-form">
+      <form class=form action="/forgot_pass" onsubmit="myFunction()" method="POST" class="contact-form">
         <div class="row mt-5 ">
           <div class="col-12 col-sm-6 py-2 wow fadeInRight">
-            <input type="text" name="name" id="name" required class="form-control required"" placeholder="Nombre:">
-          </div>
-          <div class="col-12 col-sm-6 py-2 wow fadeInRight">
-            <input type="text" name="last_name" id="last_name" required class="form-control" placeholder="Apellidos:">
-          </div>
-          <div class="col-12 col-sm-6 py-2 wow fadeInLeft">
-            <input type="password" name="password" id="password" required class="form-control" minlength="8" placeholder="Contraseña:">
-          </div>
-          <div class="col-12 col-sm-6 py-2 wow fadeInRight">
-            <input type="password" name="pass_confirmation" id="pass_confirmation" required class="form-control" minlength="8" placeholder="Repetir Contraseña:">
-          </div>
-          <div class="col-12 col-sm-6 py-2 wow fadeInLeft">
-            <input oninput="checkRut(this)" type="text" name="rut" id="rut" maxlength="10" class="form-control" required placeholder="Rut: (Ej: 10123432-2)">
-          </div>
-          <div class="col-12 col-sm-6 py-2 wow fadeInRight">
-            <input type="email" name="email" id="email" class="form-control" required placeholder="Correo electronico:">
-          </div>
-          <div class="col-12 col-sm-6 py-2 wow fadeInLeft">
-            <input type="text" name="cellphone_num" id="cellphone_num" class="form-control" required placeholder="Numero de celular:">
-          </div>
-
-          <div class="col-12 col-sm-6 py-2 wow fadeInRight">
-            <input type="text" name="phone_num" id="phone_num" class="form-control"  placeholder="Telefono fijo: (Opcional)">
-          </div>
-          <div class="col-12 py-2 wow fadeInUp" data-wow-delay="300ms">
-            <input type="text" name="address" id="address" class="form-control"  placeholder="Direccion: (Ej: Padre Alonso de Ovalle 1586) (Opcional)">
+            <input oninput="checkEmail(this)" type="email" name="email" id="email" class="form-control" required placeholder="Correo electronico:">
           </div>
         </div>
         <br>
 
         <div class="form-group">
-            <button class="boton btn btn-primary wow fadeInUp">Registrar</button>
+            <button class="boton btn btn-primary wow fadeInUp">Recuperar</button>
         </div>
 
     </form>
     <script>
     function myFunction() {
-      alert("Su cuenta ha sido creada!");
+      alert("Se mostrara su contraseña a continuación");
     }
     </script>
   
@@ -115,11 +90,7 @@
 
     </div> -->
 
-    <script>
-        function myFunction() {
-          alert("Ya creaste tu cuenta en Dos Alamos! Porfavor, inicia sesion.");
-        }
-        </script>
+  
 
     <script src="../static/js/rut.js"></script>
 
