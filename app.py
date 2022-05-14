@@ -16,7 +16,11 @@ mysql = MySQL(app)
 
 @app.route('/')
 def home():
-    return render_template("contenido.html")    
+    return render_template("contenido.html")  
+
+@app.route('/horadoc', methods = ["GET", "POST"])
+def horadoc():
+    return render_template("horadoc.html")  
 
 @app.route('/forgot_pass', methods = ["GET", "POST"])
 def forgot_pass():
