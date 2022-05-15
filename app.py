@@ -20,7 +20,13 @@ def home():
 
 @app.route('/horadoc', methods = ["GET", "POST"])
 def horadoc():
-    return render_template("horadoc.html")  
+    if request.method == 'POST':
+        return render_template("secretaria/home_secretaria")    
+    else: 
+        return render_template("secretaria/horadoc.html")  
+
+
+    
 
 
 
