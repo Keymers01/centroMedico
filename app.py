@@ -81,7 +81,16 @@ def login():
                 session['rut'] = user['rut']
                 session['password'] = user['password']
                 
-                return render_template("paciente/home.html")
+                if user["type"] == "secretaria":
+                    session['type'] = user['type']
+                    return render_template("secretaria/home_secretaria.html")
+                
+                elif user["type"] == "doctor":
+                    session['type'] = user['type']
+                    return render_template("doctor/home_doctor.html")
+
+                else:
+                    return render_template("paciente/home.html")
 
             else:
                 notificacion.title = "Error de Acceso"
