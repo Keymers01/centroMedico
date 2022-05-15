@@ -26,10 +26,6 @@ def horadoc():
         return render_template("secretaria/horadoc.html")  
 
 
-    
-
-
-
 @app.route('/forgot_pass', methods = ["GET", "POST"])
 def forgot_pass():
 

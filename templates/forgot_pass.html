@@ -11,15 +11,18 @@
       <form class=form action="/forgot_pass" onsubmit="myFunction()" method="POST" class="contact-form">
         <div class="row mt-5 ">
           <div class="col-12 col-sm-6 py-2 wow fadeInRight">
+            <label>Ingrese su correo electronico</label>
+            <br>
             <input oninput="checkEmail(this)" type="email" name="email" id="email" class="form-control" required placeholder="Correo electronico:">
           </div>
+          <div class="form">
+            <button class="">Recuperar</button>
+        </div>
         </div>
         
         <br>
 
-        <div class="form-group">
-            <button class="boton btn btn-primary wow fadeInUp">Recuperar</button>
-        </div>
+
 
     </form>
     <script>
