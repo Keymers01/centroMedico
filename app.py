@@ -39,22 +39,18 @@ def forgot_pass():
         user = cur.fetchone()
         cur.close()
 
-        if len(user)>0:
-            if email == user["email"]:
-                session['password'] = user['password']
+        
+        if email == user["email"]:
+            session['password'] = user['password']
                 
-                return render_template("paciente/pass.html")
+            return render_template("paciente/pass.html")
 
-            else:
-                notificacion.title = "Error de Acceso"
-                notificacion.message="Correo no valido"
-                notificacion.send()
-                return render_template("forgot_pass.html")
         else:
             notificacion.title = "Error de Acceso"
-            notificacion.message="No existe el usuario"
+            notificacion.message="Correo no valido"
             notificacion.send()
             return render_template("forgot_pass.html")
+        
     else:
         
         return render_template("forgot_pass.html")
