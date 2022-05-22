@@ -1,62 +1,45 @@
-{% extends 'layout.html' %}
-{% block title %} Registro {% endblock %}
+{% extends 'layout_session.html' %}
+{% block title %} Registro Fecha {% endblock %}
 
 {% block content %}
+<body class="home">
 
 
-<div class="page-section">
+  <div class="page-section">
     <div class="container">
       <h1 class="text-center wow fadeInUp">Ingrese disponibilidad de medico</h1>
+  <form class=form action="/horadoc" method="POST" class="contact-form">
+    <div class="row mt-5 ">
 
-      <form class=form action="/horadoc" onsubmit="myFunction()" method="POST" class="contact-form">
-        <div class="row mt-5 ">
+      <h3 class="text-center wow fadeInUp">Seleccione especialidad</h3>
 
-          <div class="col-12 col-sm-6 py-2 wow fadeInRight" data-wow-delay="300ms">
-            <select name="especialidad" id="especialidad" required class="custom-select">
-              <option value="general">Especialidad:</option>
-              <option value="cardiology">Otorrinolaringologo</option>
-              <option value="dental">Kinesiologo</option>
-              <option value="neurology">Oftalmologo</option>
-              <option value="orthopaedics">Cardiologo</option>
-              <option value="orthopaedics">Medico general</option>
 
-            </select>
-          </div>
-          <div class="col-12 col-sm-6 py-2 wow fadeInRight" data-wow-delay="300ms">
-            <select name="doctor" id="doctor" required class="custom-select">
-              <option value="general">Seleccione doctor:</option>
-              <option value="cardiology">Roberto</option>
-              <option value="dental">Carlo</option>
-              <option value="neurology">Felipe</option>
-              <option value="orthopaedics">Mario</option>
-              <option value="orthopaedics">Pedro</option>
+      <div class="col-12 col-sm-6 py-2 wow fadeInRight" data-wow-delay="300ms">
+        <div class="row mt-3 "><input type="radio" id="general" name="specialty" value="general"><label for="general">
+            Medicina General</label></div>
+        <div class="row mt-3 "><input type="radio" id="kinesiologo" name="specialty" value="kinesiologo"><label
+            for="kinesiologo"> Kinesiologia</label></div>
+        <div class="row mt-3 "><input type="radio" id="oftalmologo" name="specialty" value="oftalmologo"><label
+            for="oftalmologo"> Oftalmologia</label></div>
+        <div class="row mt-3 "><input type="radio" id="otorrino" name="specialty" value="otorrino"><label
+            for="otorrino"> Otorrinolaringologia</label></div>
 
-            </select>
-          </div>
-          <div class="col-12 col-sm-6 py-2 wow fadeInRight">
-            <input type="text" name="date" id="date"  class="form-control" placeholder="Ingrese fecha:">
-          </div>
-          <div class="col-12 col-sm-6 py-2 wow fadeInRight">
-            <input type="text" name="hour" id="hour"  class="form-control" placeholder="Ingrese hora:">
-          </div>
-
-        
-
-        <div class="form-group">
-          <button class="btn btn-primary wow zoomIn" href="/home_secretaria">Ingresar disponibilidad</button>
+        <div class="">
+          <button class="btn btn-primary wow zoomIn" class="boton">Seleccionar</button>
         </div>
-
-        <div class="form-group">
-          <button class="btn btn-primary wow zoomIn" href="/home_secretaria">Salir</button>
+        <div class="form-group
+">
+          <button class="btn btn-primary wow zoomIn" href="/home_secretaria">Volver</button>
         </div>
+  </form>
+</div>
 
-    </form>
-    <script>
-    function myFunction() {
-      alert("Disponibilidad agregada!");
-    }
-    </script>
+</div>
+
+
   
+</body>
+
 
 
 {% endblock %}

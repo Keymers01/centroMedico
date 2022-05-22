@@ -1,0 +1,222 @@
+{% extends 'layout.html' %}
+{% block title %} Home {% endblock %}
+
+{% block content %}
+
+
+<div class="page-hero bg-image overlay-dark" img src="{{url_for('static', filename='img/centro.jpg')}}">
+    <div class="hero-section">
+      <div class="container text-center wow zoomIn">
+        <span class="subhead">Salud al alcance de todos
+        </span>
+        <h1 class="display-4">Dos Alamos</h1>   
+      </div>
+    </div>
+  </div>
+
+
+  <div class="bg-light">
+    <div class="page-section py-3 mt-md-n5 custom-index">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-4 py-3 py-md-0">
+            <div class="card-service wow fadeInUp">
+              <div class="circle-shape bg-secondary text-white">
+                <i class="fa fa-star-o"></i>
+              </div>
+              <p><span>Profesionales</span> De calidad</p>
+            </div>
+          </div>
+          <div class="col-md-4 py-3 py-md-0">
+            <div class="card-service wow fadeInUp">
+              <div class="circle-shape bg-primary text-white">
+                <i class="fa fa-credit-card"></i>
+              </div>
+              <p><span>Flexibilidad </span>Para pagos</p>
+            </div>
+          </div>
+          <div class="col-md-4 py-3 py-md-0">
+            <div class="card-service wow fadeInUp">
+              <div class="circle-shape bg-accent text-white">
+                <i class="fa fa-hospital-o"></i>
+              </div>
+              <p><span>Disponibilidad </span>24/7</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+
+    <div class="page-section">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8 wow fadeInUp">
+              <h1 class="text-center mb-3">Somos un centro médico</h1>
+              <div class="text-lg">
+                <p>Con énfasis en otorrinolaringología , kinesiologia, oftalmologia y medicina general, que entregando una
+                  atención de calidad y equipamiento de punta , le ofrece a sus pacientes resolver las necesidades de
+                  atención médica , imagenología y exámenes de laboratorio, con los mejores profesionales a un precio
+                  razonable en el mejor lugar y con instalaciones de primer nivel.
+                <h1 class="text-center mb-3">Mision</h1>
+                <p>Ser líder Regional en prestación de servicios médicos especialmente de Otorrinolaringología y
+                  Traumatología, poniendo a disposición de nuestros pacientes a los mejores profesionales , la mejor
+                  infraestructura y tecnología en dichas areas , así como resolver con calidad en equipamiento y procesos
+                  las necesidades en examenes de laboratorio e imagenología que la población de la VI y VII región requiera.
+                <h1 class="text-center mb-3">Vision</h1>
+                <p>Ser un referente nacional en atención ambulatoria en diversas especialidades de la medicina.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+    <!-- <div class="page-section">
+      <div class="container">
+        <h1 class="text-center mb-5 wow fadeInUp">Nuestros Especialistas </h1>
+        <div class="owl-carousel wow fadeInUp" id="doctorSlideshow">
+          <div class="item">
+            <div class="card-doctor">
+              <div class="header">
+                <img src="../assets/img/doctors/doctor_7.jpg" alt="">
+                <div class="meta">
+                  <a href="#"><span class="mai-call"></span></a>
+                  <a href="#"><span class="mai-logo-whatsapp"></span></a>
+                </div>
+              </div>
+              <div class="body">
+                <p class="text-xl mb-0">Dr. Roberto Gonzalez</p>
+                <span class="text-sm text-grey">Otorrinolaringologo</span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card-doctor">
+              <div class="header">
+                <img src="../assets/img/doctors/doctor_2.jpg" alt="">
+                <div class="meta">
+                  <a href="#"><span class="mai-call"></span></a>
+                  <a href="#"><span class="mai-logo-whatsapp"></span></a>
+                </div>
+              </div>
+              <div class="body">
+                <p class="text-xl mb-0">Dr. Alexander Ulcen</p>
+                <span class="text-sm text-grey">Kinesiologo</span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card-doctor">
+              <div class="header">
+                <img src="../assets/img/doctors/doctor_3.jpg" alt="">
+                <div class="meta">
+                  <a href="#"><span class="mai-call"></span></a>
+                  <a href="#"><span class="mai-logo-whatsapp"></span></a>
+                </div>
+              </div>
+              <div class="body">
+                <p class="text-xl mb-0">Dr. Rebeca Iriarte</p>
+                <span class="text-sm text-grey">Oftalmologa</span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card-doctor">
+              <div class="header">
+                <img src="../assets/img/doctors/doctor_1.jpg" alt="">
+                <div class="meta">
+                  <a href="#"><span class="mai-call"></span></a>
+                  <a href="#"><span class="mai-logo-whatsapp"></span></a>
+                </div>
+              </div>
+              <div class="body">
+                <p class="text-xl mb-0">Dr. Maria Rubio</p>
+                <span class="text-sm text-grey">Cardiologa</span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card-doctor">
+              <div class="header">
+                <img src="../assets/img/doctors/doctor_4.jpg" alt="">
+                <div class="meta">
+                  <a href="#"><span class="mai-call"></span></a>
+                  <a href="#"><span class="mai-logo-whatsapp"></span></a>
+                </div>
+              </div>
+              <div class="body">
+                <p class="text-xl mb-0">Dr. Manuel Canto</p>
+                <span class="text-sm text-grey">Medico General</span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card-doctor">
+              <div class="header">
+                <img src="../assets/img/doctors/doctor_6.jpg" alt="">
+                <div class="meta">
+                  <a href="#"><span class="mai-call"></span></a>
+                  <a href="#"><span class="mai-logo-whatsapp"></span></a>
+                </div>
+              </div>
+              <div class="body">
+                <p class="text-xl mb-0">Dr. Felipe Contreras</p>
+                <span class="text-sm text-grey">Medico General</span> -->
+  
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="page-footer">
+        <div class="container">
+          <div class="row px-md-3">
+            <div class="col-sm-6 col-lg-3 py-3">
+              <h5>Empresa</h5>
+              <ul class="footer-menu">
+                <li><a href="#">Sobre Nosotros</a></li>
+                <li><a href="#">Historia</a></li>
+                <li><a href="#">Garantias</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-6 col-lg-3 py-3">
+              <h5>Más</h5>
+              <ul class="footer-menu">
+                <li><a href="#">Terminos Y Condiciones</a></li>
+                <li><a href="#">Privacidad</a></li>
+                <li><a href="#">Garantias</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-6 col-lg-3 py-3">
+              <ul class="footer-menu">
+                <h5>Contacto</h5>
+                <p class="footer-link mt-2">Padre Alonso de Ovalle 1586, Santiago, Región Metropolitana</p>
+                <a href="#" class="footer-link">(2) 2354 0600</a>
+                <a href="#" class="footer-link">contacto@dosalamos.com</a>
+              </ul>
+            </div>
+            <div class="col-sm-6 col-lg-3 py-3">
+    
+    
+              <h5 class="mt-3">Redes Sociales</h5>
+    
+              <div class="footer-sosmed mt-3">
+                <a href="#" target="_blank"><span class="mai-logo-facebook-f"></span></a>
+                <a href="#" target="_blank"><span class="mai-logo-twitter"></span></a>
+                <a href="#" target="_blank"><span class="mai-logo-google-plus-g"></span></a>
+                <a href="#" target="_blank"><span class="mai-logo-instagram"></span></a>
+                <a href="#" target="_blank"><span class="mai-logo-linkedin"></span></a>
+              </div>
+            </div>
+          </div>
+    
+          <hr>
+    
+          <p id="copyright">Copyright &copy; 2022 <a href="https://es.wikipedia.org/wiki/Populus" target="_blank">Dos Alamos</a>. Todos los
+            derechos reservado</p>
+        </div>
+      </footer>
+    
+{% endblock %}

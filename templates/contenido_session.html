@@ -1,16 +1,14 @@
-{% extends 'layout.html' %}
+{% extends 'layout_session.html' %}
 {% block title %} Home {% endblock %}
 
 {% block content %}
 
-<body class="home">
-
-<div class="page-hero" img src="{{url_for('static', filename='img/centro.jpg')}}">
+<div class="page-hero bg-image overlay-dark" img src="{{url_for('static', filename='img/centro.jpg')}}">
     <div class="hero-section">
       <div class="container text-center wow zoomIn">
-        <span class="subhead" style="color: #01785c">Salud al alcance de todos
+        <span class="subhead">Salud al alcance de todos
         </span>
-        <h1 class="display-4" style="color: #01785c">Dos Alamos</h1>   
+        <h1 class="display-4">Dos Alamos</h1>   
       </div>
     </div>
   </div>
@@ -48,7 +46,7 @@
       </div>
     </div> 
 
-    <div class="page-section pb-0">
+    <!-- <div class="page-section pb-0">
         <div class="container">
           <div class="row align-items-center">
             <div class="col-lg-6 py-3 wow fadeInUp">
@@ -57,7 +55,7 @@
                 las distintas etapas de la vida a partir de su nacimiento en adelante, en las distintas especialidades
                 médicas con las que contamos y con el servicio cálido que nos caracteriza desde sus inicios, incorporando
                 la mejor tecnología disponible y profesionales de la salud altamente calificados.</p>
-                <br>
+              <a href="about.html" class="btn btn-primary">Learn More</a>
             </div>
             <div class="col-lg-6 wow fadeInRight" data-wow-delay="400ms">
               <div class="img-place custom-img-1">
@@ -67,8 +65,107 @@
           </div>
         </div>
       </div> 
-    </div>
+    </div>  -->
   
+    <!-- <div class="page-section">
+      <div class="container">
+        <h1 class="text-center mb-5 wow fadeInUp">Nuestros Especialistas </h1>
+        <div class="owl-carousel wow fadeInUp" id="doctorSlideshow">
+          <div class="item">
+            <div class="card-doctor">
+              <div class="header">
+                <img src="../assets/img/doctors/doctor_7.jpg" alt="">
+                <div class="meta">
+                  <a href="#"><span class="mai-call"></span></a>
+                  <a href="#"><span class="mai-logo-whatsapp"></span></a>
+                </div>
+              </div>
+              <div class="body">
+                <p class="text-xl mb-0">Dr. Roberto Gonzalez</p>
+                <span class="text-sm text-grey">Otorrinolaringologo</span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card-doctor">
+              <div class="header">
+                <img src="../assets/img/doctors/doctor_2.jpg" alt="">
+                <div class="meta">
+                  <a href="#"><span class="mai-call"></span></a>
+                  <a href="#"><span class="mai-logo-whatsapp"></span></a>
+                </div>
+              </div>
+              <div class="body">
+                <p class="text-xl mb-0">Dr. Alexander Ulcen</p>
+                <span class="text-sm text-grey">Kinesiologo</span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card-doctor">
+              <div class="header">
+                <img src="../assets/img/doctors/doctor_3.jpg" alt="">
+                <div class="meta">
+                  <a href="#"><span class="mai-call"></span></a>
+                  <a href="#"><span class="mai-logo-whatsapp"></span></a>
+                </div>
+              </div>
+              <div class="body">
+                <p class="text-xl mb-0">Dr. Rebeca Iriarte</p>
+                <span class="text-sm text-grey">Oftalmologa</span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card-doctor">
+              <div class="header">
+                <img src="../assets/img/doctors/doctor_1.jpg" alt="">
+                <div class="meta">
+                  <a href="#"><span class="mai-call"></span></a>
+                  <a href="#"><span class="mai-logo-whatsapp"></span></a>
+                </div>
+              </div>
+              <div class="body">
+                <p class="text-xl mb-0">Dr. Maria Rubio</p>
+                <span class="text-sm text-grey">Cardiologa</span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card-doctor">
+              <div class="header">
+                <img src="../assets/img/doctors/doctor_4.jpg" alt="">
+                <div class="meta">
+                  <a href="#"><span class="mai-call"></span></a>
+                  <a href="#"><span class="mai-logo-whatsapp"></span></a>
+                </div>
+              </div>
+              <div class="body">
+                <p class="text-xl mb-0">Dr. Manuel Canto</p>
+                <span class="text-sm text-grey">Medico General</span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card-doctor">
+              <div class="header">
+                <img src="../assets/img/doctors/doctor_6.jpg" alt="">
+                <div class="meta">
+                  <a href="#"><span class="mai-call"></span></a>
+                  <a href="#"><span class="mai-logo-whatsapp"></span></a>
+                </div>
+              </div>
+              <div class="body">
+                <p class="text-xl mb-0">Dr. Felipe Contreras</p>
+                <span class="text-sm text-grey">Medico General</span> -->
+  
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <footer class="page-footer">
         <div class="container">
@@ -118,7 +215,5 @@
             derechos reservado</p>
         </div>
       </footer>
-
-    </body>
-
+    
 {% endblock %}
