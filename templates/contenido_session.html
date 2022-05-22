@@ -1,0 +1,219 @@
+{% extends 'layout_session.html' %}
+{% block title %} Home {% endblock %}
+
+{% block content %}
+
+<div class="page-hero bg-image overlay-dark" img src="{{url_for('static', filename='img/centro.jpg')}}">
+    <div class="hero-section">
+      <div class="container text-center wow zoomIn">
+        <span class="subhead">Salud al alcance de todos
+        </span>
+        <h1 class="display-4">Dos Alamos</h1>   
+      </div>
+    </div>
+  </div>
+
+
+  <div class="bg-light">
+    <div class="page-section py-3 mt-md-n5 custom-index">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-4 py-3 py-md-0">
+            <div class="card-service wow fadeInUp">
+              <div class="circle-shape bg-secondary text-white">
+                <i class="fa fa-star-o"></i>
+              </div>
+              <p><span>Profesionales</span> De calidad</p>
+            </div>
+          </div>
+          <div class="col-md-4 py-3 py-md-0">
+            <div class="card-service wow fadeInUp">
+              <div class="circle-shape bg-primary text-white">
+                <i class="fa fa-credit-card"></i>
+              </div>
+              <p><span>Flexibilidad </span>Para pagos</p>
+            </div>
+          </div>
+          <div class="col-md-4 py-3 py-md-0">
+            <div class="card-service wow fadeInUp">
+              <div class="circle-shape bg-accent text-white">
+                <i class="fa fa-hospital-o"></i>
+              </div>
+              <p><span>Disponibilidad </span>24/7</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+
+    <!-- <div class="page-section pb-0">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6 py-3 wow fadeInUp">
+              <h1>Bienvenido a tu centro <br> Medico</h1>
+              <p class="text-grey mb-4">Bienvenidos a Dos Alamos, Centro Medico preparado para atender a sus pacientes en
+                las distintas etapas de la vida a partir de su nacimiento en adelante, en las distintas especialidades
+                médicas con las que contamos y con el servicio cálido que nos caracteriza desde sus inicios, incorporando
+                la mejor tecnología disponible y profesionales de la salud altamente calificados.</p>
+              <a href="about.html" class="btn btn-primary">Learn More</a>
+            </div>
+            <div class="col-lg-6 wow fadeInRight" data-wow-delay="400ms">
+              <div class="img-place custom-img-1">
+                <img src="../assets/img/bg-doctor.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div>  -->
+  
+    <!-- <div class="page-section">
+      <div class="container">
+        <h1 class="text-center mb-5 wow fadeInUp">Nuestros Especialistas </h1>
+        <div class="owl-carousel wow fadeInUp" id="doctorSlideshow">
+          <div class="item">
+            <div class="card-doctor">
+              <div class="header">
+                <img src="../assets/img/doctors/doctor_7.jpg" alt="">
+                <div class="meta">
+                  <a href="#"><span class="mai-call"></span></a>
+                  <a href="#"><span class="mai-logo-whatsapp"></span></a>
+                </div>
+              </div>
+              <div class="body">
+                <p class="text-xl mb-0">Dr. Roberto Gonzalez</p>
+                <span class="text-sm text-grey">Otorrinolaringologo</span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card-doctor">
+              <div class="header">
+                <img src="../assets/img/doctors/doctor_2.jpg" alt="">
+                <div class="meta">
+                  <a href="#"><span class="mai-call"></span></a>
+                  <a href="#"><span class="mai-logo-whatsapp"></span></a>
+                </div>
+              </div>
+              <div class="body">
+                <p class="text-xl mb-0">Dr. Alexander Ulcen</p>
+                <span class="text-sm text-grey">Kinesiologo</span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card-doctor">
+              <div class="header">
+                <img src="../assets/img/doctors/doctor_3.jpg" alt="">
+                <div class="meta">
+                  <a href="#"><span class="mai-call"></span></a>
+                  <a href="#"><span class="mai-logo-whatsapp"></span></a>
+                </div>
+              </div>
+              <div class="body">
+                <p class="text-xl mb-0">Dr. Rebeca Iriarte</p>
+                <span class="text-sm text-grey">Oftalmologa</span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card-doctor">
+              <div class="header">
+                <img src="../assets/img/doctors/doctor_1.jpg" alt="">
+                <div class="meta">
+                  <a href="#"><span class="mai-call"></span></a>
+                  <a href="#"><span class="mai-logo-whatsapp"></span></a>
+                </div>
+              </div>
+              <div class="body">
+                <p class="text-xl mb-0">Dr. Maria Rubio</p>
+                <span class="text-sm text-grey">Cardiologa</span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card-doctor">
+              <div class="header">
+                <img src="../assets/img/doctors/doctor_4.jpg" alt="">
+                <div class="meta">
+                  <a href="#"><span class="mai-call"></span></a>
+                  <a href="#"><span class="mai-logo-whatsapp"></span></a>
+                </div>
+              </div>
+              <div class="body">
+                <p class="text-xl mb-0">Dr. Manuel Canto</p>
+                <span class="text-sm text-grey">Medico General</span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card-doctor">
+              <div class="header">
+                <img src="../assets/img/doctors/doctor_6.jpg" alt="">
+                <div class="meta">
+                  <a href="#"><span class="mai-call"></span></a>
+                  <a href="#"><span class="mai-logo-whatsapp"></span></a>
+                </div>
+              </div>
+              <div class="body">
+                <p class="text-xl mb-0">Dr. Felipe Contreras</p>
+                <span class="text-sm text-grey">Medico General</span> -->
+  
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="page-footer">
+        <div class="container">
+          <div class="row px-md-3">
+            <div class="col-sm-6 col-lg-3 py-3">
+              <h5>Empresa</h5>
+              <ul class="footer-menu">
+                <li><a href="#">Sobre Nosotros</a></li>
+                <li><a href="#">Historia</a></li>
+                <li><a href="#">Garantias</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-6 col-lg-3 py-3">
+              <h5>Más</h5>
+              <ul class="footer-menu">
+                <li><a href="#">Terminos Y Condiciones</a></li>
+                <li><a href="#">Privacidad</a></li>
+                <li><a href="#">Garantias</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-6 col-lg-3 py-3">
+              <ul class="footer-menu">
+                <h5>Contacto</h5>
+                <p class="footer-link mt-2">Padre Alonso de Ovalle 1586, Santiago, Región Metropolitana</p>
+                <a href="#" class="footer-link">(2) 2354 0600</a>
+                <a href="#" class="footer-link">contacto@dosalamos.com</a>
+              </ul>
+            </div>
+            <div class="col-sm-6 col-lg-3 py-3">
+    
+    
+              <h5 class="mt-3">Redes Sociales</h5>
+    
+              <div class="footer-sosmed mt-3">
+                <a href="#" target="_blank"><span class="mai-logo-facebook-f"></span></a>
+                <a href="#" target="_blank"><span class="mai-logo-twitter"></span></a>
+                <a href="#" target="_blank"><span class="mai-logo-google-plus-g"></span></a>
+                <a href="#" target="_blank"><span class="mai-logo-instagram"></span></a>
+                <a href="#" target="_blank"><span class="mai-logo-linkedin"></span></a>
+              </div>
+            </div>
+          </div>
+    
+          <hr>
+    
+          <p id="copyright">Copyright &copy; 2022 <a href="https://es.wikipedia.org/wiki/Populus" target="_blank">Dos Alamos</a>. Todos los
+            derechos reservado</p>
+        </div>
+      </footer>
+    
+{% endblock %}

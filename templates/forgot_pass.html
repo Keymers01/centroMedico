@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+{% block title %} Registro {% endblock %}
+
+{% block content %}
+<body class="home">
+
+
+<div class="page-section">
+    <div class="container">
+      <h1 class="text-center wow fadeInUp">Recuperar Contraseña</h1>
+
+      <form class=form action="/forgot_pass" onsubmit="myFunction()" method="POST" class="contact-form">
+        <div class="row mt-5 ">
+          <div class="col-12 col-sm-6 py-2 wow fadeInRight">
+            <label>Ingrese su correo electronico</label>
+            <br>
+            <input oninput="checkEmail(this)" type="email" name="email" id="email" class="form-control" required placeholder="Correo electronico:">
+          </div>
+          <div class="form">
+            <button class="">Recuperar</button>
+        </div>
+        </div>
+        
+        <br>
+
+
+
+    </form>
+    <script>
+    function myFunction() {
+      alert("Se mostrara su contraseña a continuación");
+    }
+    </script>
+  
+    </div> <!-- .container --> 
+  </div> <!--.page-section -->
+
+<body>
+    
+</body>
+
+    <script src="../static/js/rut.js"></script>
+
+{% endblock %}
