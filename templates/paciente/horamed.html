@@ -1,0 +1,46 @@
+{% extends 'layout_session.html' %}
+{% block title %} Registro Fecha {% endblock %}
+
+{% block content %}
+<body class="home">
+
+
+  <div class="page-section">
+    <div class="container">
+      <h1 class="text-center wow fadeInUp">Agendar atencion medica</h1>
+  <form class=form action="/horadoc" method="POST" class="contact-form">
+    <div class="row mt-5 ">
+
+      <h3 class="text-center wow fadeInUp">Seleccione especialidad</h3>
+
+
+      <div class="col-12 col-sm-6 py-2 wow fadeInRight" data-wow-delay="300ms">
+        <div class="row mt-3 "><input type="radio" id="general" name="specialty" value="general"><label for="general">
+            Medicina General</label></div>
+        <div class="row mt-3 "><input type="radio" id="kinesiologo" name="specialty" value="kinesiologo"><label
+            for="kinesiologo"> Kinesiologia</label></div>
+        <div class="row mt-3 "><input type="radio" id="oftalmologo" name="specialty" value="oftalmologo"><label
+            for="oftalmologo"> Oftalmologia</label></div>
+        <div class="row mt-3 "><input type="radio" id="otorrino" name="specialty" value="otorrino"><label
+            for="otorrino"> Otorrinolaringologia</label></div>
+
+        <div class="">
+          <button class="btn btn-primary wow zoomIn" class="boton">Seleccionar</button>
+        </div>
+      </form>
+
+      
+        <div class="form-group">
+          <button class="btn btn-primary wow zoomIn" hidden href="/home_secretaria">Volver</button>
+        </div>
+</div>
+
+</div>
+
+
+  
+</body>
+
+
+
+{% endblock %}

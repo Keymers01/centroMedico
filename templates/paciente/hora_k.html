@@ -1,0 +1,73 @@
+{% extends 'layout_session.html' %}
+{% block title %} Registro {% endblock %}
+
+{% block content %}
+<body class="home">
+
+
+<div class="page-section">
+  <div class="container">
+    <h1 class="text-center wow fadeInUp">Ingrese datos para la atencion</h1>
+    <h3 class="text-center wow fadeInUp">(Kinesiologia)</h3>
+
+
+    <form class=form action="/medico_k" onsubmit="myFunction()" method="POST" class="contact-form">
+      <div class="row mt-8 ">
+
+        <div data-wow-delay="300ms">
+          <select name="specialty" tid="departement" class="form-control" hidden>
+            <option value="kinesiologo">kinesiologo</option>
+          </select>
+        </div>
+
+        <div class="col-12 col-sm-6 py-2 wow fadeInRight" data-wow-delay="300ms">
+          <select name="doctor" tid="departement" class="form-control">
+            <option value="Kevin Gonzalez">Kevin Gonzalez</option>
+            <option value="Ramon Ramirez">Ramon Ramirez</option>
+            <option value="Javier Contreras">Javier Contreras</option>
+          </select>
+        </div>
+
+        <div class="col-12 col-sm-6 py-2 wow fadeInRight">
+          <input type="date" name="medical_date" id="date" class="form-control" placeholder="Ingrese fecha:">
+        </div>
+
+        <div class="col-12 col-sm-6 py-2 wow fadeInRight" data-wow-delay="300ms">
+          <select name="medical_hour" tid="departement" class="form-control">
+            <option value="8:30">8:30</option>
+            <option value="9:00">9:00</option>
+            <option value="9:30">9:30</option>
+            <option value="10:00">10:00</option>
+            <option value="10:30">10:30</option>
+            <option value="11:00">11:30</option>
+            <option value="11:30">11:30</option>
+            <option value="12:00">12:00</option>
+            <option value="14:00">14:00</option>
+            <option value="14:30">14:30</option>
+          </select>
+        </div>
+
+
+
+        <div class="form-group">
+          <button class="btn btn-primary wow zoomIn" class="boton">Seleccionar</button>
+        </div>
+
+        <div class="form-group">
+          <button class="btn btn-primary wow zoomIn" hidden href="/home_paciente.html">Salir</button>
+        </div>
+
+    </form>
+    <script>
+      function myFunction() {
+        alert("Hora medica agendada!");
+      }
+    </script>
+
+  </div>
+
+</div>
+
+</body>
+
+{% endblock %}
