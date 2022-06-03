@@ -152,6 +152,23 @@ def registro():
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @app.route('/horadoc', methods = ["GET", "POST"])
 def horadoc():
     notificacion = Notify()
@@ -329,6 +346,209 @@ def medico_ot():
         notificacion.message="Las horas ya se encuentran registradas en Dos Alamos."
         notificacion.send()
         return redirect(url_for('horadoc'))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@app.route('/horamed', methods = ["GET", "POST"])
+def horamed():
+    notificacion = Notify()
+
+    if request.method == 'POST':
+        specialty = request.form['specialty']
+
+        cur = mysql.connection.cursor()
+        cur.execute("SELECT * FROM users WHERE specialty=%s",(specialty,))
+        user = cur.fetchone()
+        cur.close()
+
+        if len(user)>0:
+            if specialty == user["specialty"]:
+                session['name'] = user['name']
+                session['last_name'] = user['last_name']
+                
+                if user["specialty"] == "general":
+                    session['specialty'] = user['specialty']
+                    return redirect(url_for('medico_gp'))
+
+            
+                if user["specialty"] == "kinesiologo":
+                    session['specialty'] = user['specialty']
+                    return redirect(url_for('medico_kp'))
+            
+                if user["specialty"] == "oftalmologo":
+                    session['specialty'] = user['specialty']
+                    return redirect(url_for('medico_ofp'))
+                
+                if user["specialty"] == "otorrino":
+                    session['specialty'] = user['specialty']
+                    return redirect(url_for('medico_otp'))
+
+                else:
+                    return render_template("paciente/home.html")
+
+            else:
+                notificacion.title = "Error de Acceso"
+                notificacion.message="Especialidad no valida"
+                notificacion.send()
+                return render_template("paciente/home.html")
+        else:
+            notificacion.title = "Error de Acceso"
+            notificacion.message="No existe el usuario"
+            notificacion.send()
+            return render_template("paciente/home.html")
+    else:
+        
+        return render_template("paciente/horamed.html") 
+
+
+
+
+
+
+@app.route('/medico_gp', methods = ["GET", "POST"])
+def medico_gp():
+
+    cur = mysql.connection.cursor()
+    cur.execute("SELECT * FROM reserva")
+    reserva = cur.fetchall()   
+    cur.close()
+
+    notificacion = Notify()
+       
+    if request.method == 'GET':
+        return render_template("paciente/medico_gp.html", reserva=reserva) 
+    
+    else:
+        specialty = request.form['specialty']
+        doctor = request.form['doctor']
+        medical_date = request.form['medical_date']
+        medical_hour = request.form['medical_hour']
+        
+
+
+        cur = mysql.connection.cursor()
+        cur.execute("INSERT INTO reserva (specialty,doctor,medical_date,medical_hour) VALUES (%s,%s,%s,%s)", (specialty,doctor,medical_date,medical_hour)) 
+        mysql.connection.commit()
+        notificacion.title = "Registro Exitoso"
+        notificacion.message="Las horas ya se encuentran registradas en Dos Alamos."
+        notificacion.send()
+        return redirect(url_for('horamed'))
+
+
+
+@app.route('/medico_kp', methods = ["GET", "POST"])
+def medico_kp():
+
+    cur = mysql.connection.cursor()
+    cur.execute("SELECT * FROM reserva")
+    reserva = cur.fetchall()   
+    cur.close()
+
+    notificacion = Notify()
+       
+    if request.method == 'GET':
+        return render_template("paciente/medico_kp.html", reserva=reserva) 
+    
+    else:
+        specialty = request.form['specialty']
+        doctor = request.form['doctor']
+        medical_date = request.form['medical_date']
+        medical_hour = request.form['medical_hour']
+        
+
+
+        cur = mysql.connection.cursor()
+        cur.execute("INSERT INTO reserva (specialty,doctor,medical_date,medical_hour) VALUES (%s,%s,%s,%s)", (specialty,doctor,medical_date,medical_hour)) 
+        mysql.connection.commit()
+        notificacion.title = "Registro Exitoso"
+        notificacion.message="Las horas ya se encuentran registradas en Dos Alamos."
+        notificacion.send()
+        return redirect(url_for('horamed'))
+
+
+
+@app.route('/medico_ofp', methods = ["GET", "POST"])
+def medico_ofp():
+
+    cur = mysql.connection.cursor()
+    cur.execute("SELECT * FROM reserva")
+    reserva = cur.fetchall()   
+    cur.close()
+
+    notificacion = Notify()
+       
+    if request.method == 'GET':
+        return render_template("paciente/medico_ofp.html", reserva=reserva) 
+    
+    else:
+        specialty = request.form['specialty']
+        doctor = request.form['doctor']
+        medical_date = request.form['medical_date']
+        medical_hour = request.form['medical_hour']
+        
+
+
+        cur = mysql.connection.cursor()
+        cur.execute("INSERT INTO reserva (specialty,doctor,medical_date,medical_hour) VALUES (%s,%s,%s,%s)", (specialty,doctor,medical_date,medical_hour)) 
+        mysql.connection.commit()
+        notificacion.title = "Registro Exitoso"
+        notificacion.message="Las horas ya se encuentran registradas en Dos Alamos."
+        notificacion.send()
+        return redirect(url_for('horamed'))
+
+
+
+@app.route('/medico_otp', methods = ["GET", "POST"])
+def medico_otp():
+
+    cur = mysql.connection.cursor()
+    cur.execute("SELECT * FROM reserva")
+    reserva = cur.fetchall()   
+    cur.close()
+
+    notificacion = Notify()
+       
+    if request.method == 'GET':
+        return render_template("paciente/medico_otp.html", reserva=reserva) 
+    
+    else:
+        specialty = request.form['specialty']
+        doctor = request.form['doctor']
+        medical_date = request.form['medical_date']
+        medical_hour = request.form['medical_hour']
+        
+
+
+        cur = mysql.connection.cursor()
+        cur.execute("INSERT INTO reserva (specialty,doctor,medical_date,medical_hour) VALUES (%s,%s,%s,%s)", (specialty,doctor,medical_date,medical_hour)) 
+        mysql.connection.commit()
+        notificacion.title = "Registro Exitoso"
+        notificacion.message="Las horas ya se encuentran registradas en Dos Alamos."
+        notificacion.send()
+        return redirect(url_for('horamed'))
 
 
 
