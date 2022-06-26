@@ -7,13 +7,20 @@
 
 <div class="page-section">
   <div class="container">
-    <h1 class="text-center wow fadeInUp">Ingrese disponibilidad de medico</h1>
+    <h1 class="text-center wow fadeInUp">Ingrese datos para agendar atencion medica</h1>
     <h3 class="text-center wow fadeInUp">(Medicina General)</h3>
 
 
-    <form class=form action="/medico_g" onsubmit="myFunction()" method="POST" class="contact-form">
+    <form class=form action="/medico_gp" onsubmit="myFunction()" method="POST" class="contact-form">
       <div class="row mt-8 ">
 
+        <div data-wow-delay="300ms">
+          <select name="rut" tid="departement" class="form-control" hidden>
+            <option value="19507743-6">19507743-6</option>
+          </select>
+        </div>
+
+      
         <div data-wow-delay="300ms">
           <select name="specialty" tid="departement" class="form-control" hidden>
             <option value="general">general</option>
@@ -53,9 +60,6 @@
           <button class="btn btn-primary wow zoomIn" class="boton">Seleccionar</button>
         </div>
 
-        <div class="form-group">
-          <button class="btn btn-primary wow zoomIn" href="home_secretaria.html">Salir</button>
-        </div>
 
     </form>
     <script>

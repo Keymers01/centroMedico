@@ -1,0 +1,100 @@
+{% extends 'layout_session.html' %}
+{% block title %} Registro Fecha {% endblock %}
+
+{% block content %}
+<body class="home">
+
+  <h1 style="padding-top: 30px;" class="text-center wow fadeInUp">Lista de pacientes</h1>
+
+  <style>
+    table,
+    th,
+    td {
+        border: 2px solid black;
+        border-collapse: separate;
+        background-color: 01785c;
+        justify-content: center;
+        padding: 3px;
+    }
+
+    th,
+    td {
+        color: black;
+        padding: 6px;
+    }
+</style>
+
+
+<div style="text-align: -webkit-center; padding-top: 30px;">
+<table>
+    <tr>
+        <th>Nombre paciente</th>
+        <th>Rut paciente</th>
+        <th>Fecha y Hora</th>
+        <th>Estado</th>
+
+    </tr>
+    <tr>
+        <td>Lucas Ulcen</td>
+        <td>19.223.344-1</td>
+        <td>21/06/22 12:35</td>
+        <td>Cancelado</td>
+
+    </tr>
+    <tr>
+        <td>Ricardo Araya</td>
+        <td>20.273.874-1</td>
+        <td>21/06/22 12:35</td>
+        <td style= "justify-content: center;"class=""  button id="btn">En Espera</button>
+
+            <script>
+                const btn = document.getElementById('btn');
+                btn.addEventListener('click', function handleClick() {
+                    btn.textContent = 'Atendido';
+                });
+            </script>
+        </td>
+
+
+    </tr>
+    <tr>
+        <td>Kevin Gonzalez</td>
+        <td>14.372.651-1</td>
+        <td>21/06/22 12:35</td>
+        
+        <td style= "justify-content: center;"class=""  button id="btn1">En Espera</button>
+
+            <script>
+                const btn1 = document.getElementById('btn1');
+                btn1.addEventListener('click', function handleClick() {
+                    btn1.textContent = 'Atendido';
+                });
+            </script>
+        </td>
+
+    </tr>
+    <tr>
+        <td>Carlos iriarte</td>
+        <td>16.423.923-4</td>
+        <td>21/06/22 12:35</td>
+        <td>Atendido</td>
+    </tr>
+    <tr>
+        <td>Jeremias Canto</td>
+        <td>17.293.045-2</td>
+        <td>21/06/22 12:35</td>
+        <td>Atendido</td>
+    </tr>
+  </div>
+
+</table>
+
+<div>
+  <a style="margin: 3%;"class="btn btn-primary ml-lg-3" href="/volverhome_doctor">Volver atras</a>
+</div>
+  
+</body>
+
+
+
+{% endblock %}

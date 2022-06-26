@@ -350,28 +350,6 @@ def medico_ot():
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @app.route('/horamed', methods = ["GET", "POST"])
 def horamed():
     notificacion = Notify()
@@ -432,16 +410,17 @@ def horamed():
 def medico_gp():
 
     cur = mysql.connection.cursor()
-    cur.execute("SELECT * FROM reserva")
-    reserva = cur.fetchall()   
+    cur.execute("SELECT * FROM horamed")
+    horamed = cur.fetchall()   
     cur.close()
 
     notificacion = Notify()
        
     if request.method == 'GET':
-        return render_template("paciente/medico_gp.html", reserva=reserva) 
+        return render_template("paciente/medico_gp.html", horamed=horamed) 
     
     else:
+        rut = request.form['rut']
         specialty = request.form['specialty']
         doctor = request.form['doctor']
         medical_date = request.form['medical_date']
@@ -450,7 +429,7 @@ def medico_gp():
 
 
         cur = mysql.connection.cursor()
-        cur.execute("INSERT INTO reserva (specialty,doctor,medical_date,medical_hour) VALUES (%s,%s,%s,%s)", (specialty,doctor,medical_date,medical_hour)) 
+        cur.execute("INSERT INTO horamed (rut,specialty,doctor,medical_date,medical_hour) VALUES (%s,%s,%s,%s,%s)", (rut,specialty,doctor,medical_date,medical_hour)) 
         mysql.connection.commit()
         notificacion.title = "Registro Exitoso"
         notificacion.message="Las horas ya se encuentran registradas en Dos Alamos."
@@ -463,16 +442,17 @@ def medico_gp():
 def medico_kp():
 
     cur = mysql.connection.cursor()
-    cur.execute("SELECT * FROM reserva")
-    reserva = cur.fetchall()   
+    cur.execute("SELECT * FROM horamed")
+    horamed = cur.fetchall()   
     cur.close()
 
     notificacion = Notify()
        
     if request.method == 'GET':
-        return render_template("paciente/medico_kp.html", reserva=reserva) 
+        return render_template("paciente/medico_kp.html", horamed=horamed) 
     
     else:
+        rut = request.form['rut']
         specialty = request.form['specialty']
         doctor = request.form['doctor']
         medical_date = request.form['medical_date']
@@ -481,7 +461,7 @@ def medico_kp():
 
 
         cur = mysql.connection.cursor()
-        cur.execute("INSERT INTO reserva (specialty,doctor,medical_date,medical_hour) VALUES (%s,%s,%s,%s)", (specialty,doctor,medical_date,medical_hour)) 
+        cur.execute("INSERT INTO horamed (rut,specialty,doctor,medical_date,medical_hour) VALUES (%s,%s,%s,%s,%s)", (rut,specialty,doctor,medical_date,medical_hour)) 
         mysql.connection.commit()
         notificacion.title = "Registro Exitoso"
         notificacion.message="Las horas ya se encuentran registradas en Dos Alamos."
@@ -494,16 +474,17 @@ def medico_kp():
 def medico_ofp():
 
     cur = mysql.connection.cursor()
-    cur.execute("SELECT * FROM reserva")
-    reserva = cur.fetchall()   
+    cur.execute("SELECT * FROM horamed")
+    horamed = cur.fetchall()   
     cur.close()
 
     notificacion = Notify()
        
     if request.method == 'GET':
-        return render_template("paciente/medico_ofp.html", reserva=reserva) 
+        return render_template("paciente/medico_ofp.html", horamed=horamed) 
     
     else:
+        rut = request.form['rut']
         specialty = request.form['specialty']
         doctor = request.form['doctor']
         medical_date = request.form['medical_date']
@@ -512,12 +493,13 @@ def medico_ofp():
 
 
         cur = mysql.connection.cursor()
-        cur.execute("INSERT INTO reserva (specialty,doctor,medical_date,medical_hour) VALUES (%s,%s,%s,%s)", (specialty,doctor,medical_date,medical_hour)) 
+        cur.execute("INSERT INTO horamed (rut,specialty,doctor,medical_date,medical_hour) VALUES (%s,%s,%s,%s,%s)", (rut,specialty,doctor,medical_date,medical_hour)) 
         mysql.connection.commit()
         notificacion.title = "Registro Exitoso"
         notificacion.message="Las horas ya se encuentran registradas en Dos Alamos."
         notificacion.send()
         return redirect(url_for('horamed'))
+
 
 
 
@@ -525,16 +507,17 @@ def medico_ofp():
 def medico_otp():
 
     cur = mysql.connection.cursor()
-    cur.execute("SELECT * FROM reserva")
-    reserva = cur.fetchall()   
+    cur.execute("SELECT * FROM horamed")
+    horamed = cur.fetchall()   
     cur.close()
 
     notificacion = Notify()
        
     if request.method == 'GET':
-        return render_template("paciente/medico_otp.html", reserva=reserva) 
+        return render_template("paciente/medico_otp.html", horamed=horamed) 
     
     else:
+        rut = request.form['rut']
         specialty = request.form['specialty']
         doctor = request.form['doctor']
         medical_date = request.form['medical_date']
@@ -543,15 +526,29 @@ def medico_otp():
 
 
         cur = mysql.connection.cursor()
-        cur.execute("INSERT INTO reserva (specialty,doctor,medical_date,medical_hour) VALUES (%s,%s,%s,%s)", (specialty,doctor,medical_date,medical_hour)) 
+        cur.execute("INSERT INTO horamed (rut,specialty,doctor,medical_date,medical_hour) VALUES (%s,%s,%s,%s,%s)", (rut,specialty,doctor,medical_date,medical_hour)) 
         mysql.connection.commit()
         notificacion.title = "Registro Exitoso"
         notificacion.message="Las horas ya se encuentran registradas en Dos Alamos."
         notificacion.send()
         return redirect(url_for('horamed'))
 
+@app.route('/atencionmed', methods = ["GET", "POST"])
+def atencionmed():
+    return render_template("doctor/atencionmed.html")
+    
+@app.route('/volverhome_doctor', methods = ["GET", "POST"])
+def volverhome_doctor():
+    return render_template("doctor/home_doctor.html")
+
+@app.route('/volverhome_paciente', methods = ["GET", "POST"])
+def volverhome_paciente():
+    return render_template("paciente/home.html")
+
 
 
 if __name__ == '__main__':
     app.secret_key = "pinchellave"
     app.run(debug=True)
+
+

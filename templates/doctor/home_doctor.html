@@ -1,20 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
-    <title>{% block title %} {% endblock %}</title>
-</head>
+{% extends 'layout_session.html' %}
+{% block title %} Login {% endblock %}
+
+{% block content %}
+
 <body class="home">
-    <div class="inicio">
-        <h1> BIENVENIDO/A {{ session['name'] }}</h1>
-        <h2>Doctor</h2>
-        
-        <button><a href="/layout">Salir</a></button>
+
+    <!-- <div class="">
+       
+        <h2>Secretaria</h2>
+        <div>
+        <button><a href="/horadoc">Disponibilidad medica</a></button></div>
+        <div>
+        <button><a href="/layout">Salir</a></button></div>  
+    </div> -->
+
+
+    <div class="page-hero">
+        <div class="hero-section">
+            <div class="container text-center wow zoomIn">
+
+                <h1 style="color: #01785c;"> Bienvenido/a {{ session['name'] }}</h1>
+
+                <div>
+                    <a class="btn btn-primary ml-lg-3" href="/atencionmed">Atenciones</a>
+                </div>
+
+            </div>
+        </div>
     </div>
-    
+
+
 </body>
-</html>
+{% endblock %}
